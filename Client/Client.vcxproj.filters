@@ -23,6 +23,24 @@
     <Filter Include="Engine\03. Manager\KeyMgr">
       <UniqueIdentifier>{34706623-6693-437f-b9de-8a182cc605eb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\04. Object">
+      <UniqueIdentifier>{4164ba76-b53f-4177-80df-373ba7c28b7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\03. Manager\TimeMgr">
+      <UniqueIdentifier>{cfb49882-38d2-43f6-b9cb-b134c5733b47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\05. Scene">
+      <UniqueIdentifier>{f7a24380-f57e-487b-9de7-ee1177a9bb5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\03. Manager\SceneMgr">
+      <UniqueIdentifier>{43573056-97db-4ecd-9ee1-53333565ff04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\05. Scene\Scene_START">
+      <UniqueIdentifier>{f62da7cf-5614-46d2-9911-ea64600e525f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\05. Scene\Scene_TOOL">
+      <UniqueIdentifier>{60d06850-0e6c-42b5-a027-ac1fb83127f4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CCore.h">
@@ -47,6 +65,24 @@
       <Filter>Engine\03. Manager\KeyMgr</Filter>
     </ClInclude>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="CObject.h">
+      <Filter>Engine\04. Object</Filter>
+    </ClInclude>
+    <ClInclude Include="struct.h">
+      <Filter>Engine\01. Header</Filter>
+    </ClInclude>
+    <ClInclude Include="CTimeMgr.h">
+      <Filter>Engine\03. Manager\TimeMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="CScene.h">
+      <Filter>Engine\05. Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="CSceneMgr.h">
+      <Filter>Engine\03. Manager\SceneMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="CScene_START.h">
+      <Filter>Engine\05. Scene\Scene_START</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Client.rc">
@@ -69,5 +105,20 @@
       <Filter>Engine\03. Manager\KeyMgr</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="CObject.cpp">
+      <Filter>Engine\04. Object</Filter>
+    </ClCompile>
+    <ClCompile Include="CTimeMgr.cpp">
+      <Filter>Engine\03. Manager\TimeMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="CScene.cpp">
+      <Filter>Engine\05. Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="CSceneMgr.cpp">
+      <Filter>Engine\03. Manager\SceneMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="CScene_START.cpp">
+      <Filter>Engine\05. Scene\Scene_START</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
