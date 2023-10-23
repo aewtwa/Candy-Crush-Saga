@@ -15,5 +15,8 @@ public:
 
 	Vec2 GetPos() { return m_vPos; }
 	Vec2 GetScale() { return m_vScale; }
+
+	virtual void update() = 0;
+	virtual void render(HDC _dc) = 0;
 };
 

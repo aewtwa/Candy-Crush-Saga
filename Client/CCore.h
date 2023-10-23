@@ -12,12 +12,10 @@ private:
 	HBITMAP	m_hBit;
 	HDC		m_memDC;
 
-	void update();
-	void render();
-
 public:
 	int init(HWND _hWnd, POINT _ptResolution);
 	void progress();
 
 	HWND GetMainHwnd() { return m_hWnd; }
+	POINT GetResolution() { return m_ptResolution; }
 };

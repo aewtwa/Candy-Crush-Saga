@@ -41,6 +41,15 @@
     <Filter Include="Engine\05. Scene\Scene_TOOL">
       <UniqueIdentifier>{60d06850-0e6c-42b5-a027-ac1fb83127f4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\04. Object\Player">
+      <UniqueIdentifier>{e806772a-8568-49d5-a4ef-36b2b64eee23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\04. Object\Ellipse">
+      <UniqueIdentifier>{c33f9a42-3c81-4eef-9959-bb17b3fea2c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\04. Object\Rectangle">
+      <UniqueIdentifier>{9e792217-d1ba-4f6a-b9f2-1e78ddcd740b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CCore.h">
@@ -83,6 +92,15 @@
     <ClInclude Include="CScene_START.h">
       <Filter>Engine\05. Scene\Scene_START</Filter>
     </ClInclude>
+    <ClInclude Include="CPlayer.h">
+      <Filter>Engine\04. Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CEllipse.h">
+      <Filter>Engine\04. Object\Ellipse</Filter>
+    </ClInclude>
+    <ClInclude Include="CRectangle.h">
+      <Filter>Engine\04. Object\Rectangle</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Client.rc">
@@ -119,6 +137,15 @@
     </ClCompile>
     <ClCompile Include="CScene_START.cpp">
       <Filter>Engine\05. Scene\Scene_START</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayer.cpp">
+      <Filter>Engine\04. Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="CEllipse.cpp">
+      <Filter>Engine\04. Object\Ellipse</Filter>
+    </ClCompile>
+    <ClCompile Include="CRectangle.cpp">
+      <Filter>Engine\04. Object\Rectangle</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
