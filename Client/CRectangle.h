@@ -7,6 +7,6 @@ public:
     CRectangle();
     virtual ~CRectangle();
 
-    virtual void update();
-    virtual void render(HDC _dc);
+    virtual void update() = 0;
+    virtual void render(HDC _dc) = 0;
 };

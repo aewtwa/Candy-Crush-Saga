@@ -22,6 +22,9 @@
 
 #define PI 3.1415926535f
 
+#define SELECT_PEN(DC, TYPE) FSelectPen tempPenSelect(DC, TYPE)
+#define SELECT_BRUSH(DC, hBrush) FSelectBrush tempBrushSelect(DC, hBrush)
+
 enum class GROUP_TYPE
 {
 	DEFAULT,
@@ -39,4 +42,14 @@ enum class SCENE_TYPE
 	STAGE_02,
 
 	END
+};
+
+enum PEN_TYPE
+{
+	GREEN_PEN,
+	BLUE_PEN,
+	RED_PEN,
+	YELLOW_PEN,
+	PURPLE_PEN,
+	PEN_END
 };

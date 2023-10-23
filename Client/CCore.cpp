@@ -8,11 +8,12 @@
 #include "CObject.h"
 
 CCore::CCore()
-	: m_hWnd(0)
+	: m_hWnd(nullptr)
 	, m_ptResolution{}
-	, m_hDC(0)
-	, m_hBit(0)
-	, m_memDC(0)
+	, m_hDC(nullptr)
+	, m_hBit(nullptr)
+	, m_memDC(nullptr)
+	, m_arrPen{}
 {
 
 }
@@ -23,6 +24,20 @@ CCore::~CCore()
 
 	DeleteDC(m_memDC);
 	DeleteObject(m_hBit);
+
+	for (UINT i = 0; i < PEN_END; ++i)
+	{
+		DeleteObject(m_arrPen[i]);
+	}
+}
+
+void CCore::CreateDefaultGDI()
+{
+	m_arrPen[RED_PEN] = CreatePen(PS_SOLID, 1, RGB(255, 20, 20));
+	m_arrPen[GREEN_PEN] = CreatePen(PS_SOLID, 1, RGB(20, 255, 20));
+	m_arrPen[BLUE_PEN] = CreatePen(PS_SOLID, 1, RGB(20, 20, 255));
+	m_arrPen[YELLOW_PEN] = CreatePen(PS_SOLID, 1, RGB(255, 255, 20));
+	m_arrPen[PURPLE_PEN] = CreatePen(PS_SOLID, 1, RGB(255, 20, 255));
 }
 
 int CCore::init(HWND _hWnd, POINT _ptResolution)
@@ -41,13 +56,15 @@ int CCore::init(HWND _hWnd, POINT _ptResolution)
 	m_hBit = CreateCompatibleBitmap(m_hDC, m_ptResolution.x, m_ptResolution.y);
 	m_memDC = CreateCompatibleDC(m_hDC);
 
-	HBITMAP hOldBit = (HBITMAP)SelectObject(m_memDC, m_hBit);
-	DeleteObject(hOldBit);
+	DeleteObject((HBITMAP)SelectObject(m_memDC, m_hBit));
 
 	// Manager 초기화
 	CTimeMgr::GetInst()->init();
 	CKeyMgr::GetInst()->init();
 	CSceneMgr::GetInst()->init();
+
+	// Default GDI Object 생성
+	CreateDefaultGDI();
 
 	return S_OK;
 }

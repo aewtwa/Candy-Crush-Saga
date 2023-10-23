@@ -12,10 +12,17 @@ private:
 	HBITMAP	m_hBit;
 	HDC		m_memDC;
 
+	HPEN	m_arrPen[PEN_END];
+
+	void CreateDefaultGDI();
+
 public:
 	int init(HWND _hWnd, POINT _ptResolution);
 	void progress();
 
 	HWND GetMainHwnd() { return m_hWnd; }
+	HDC GetMainDC() { return m_hDC; }
 	POINT GetResolution() { return m_ptResolution; }
+
+	HPEN GetPen(PEN_TYPE _type) { return m_arrPen[_type]; }
 };

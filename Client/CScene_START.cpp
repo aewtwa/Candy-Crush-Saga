@@ -5,9 +5,12 @@
 #include "CObject.h"
 
 #include "CPlayer.h"
-#include "CRectangle.h"
-#include "CEllipse.h"
 
+#include "CBlueRect.h"
+#include "CGreenRect.h"
+#include "CPurpleRect.h"
+#include "CRedRect.h"
+#include "CYellowRect.h"
 
 CScene_START::CScene_START()
 {
@@ -36,25 +39,43 @@ void CScene_START::Enter()
 	{
 		for (unsigned short int j = 0; j < Height; j++)
 		{
-			if ((i + j) % 2 == 0)
+			if (i == 0)
 			{
-				CEllipse* pEl = new CEllipse;
-				pEl->SetPos(Vec2(Scale / 2.f + (Scale)*i + Margin, 143.f + (Scale)*j));
-				pEl->SetScale(Vec2(Scale, Scale));
-				AddObject(pEl, GROUP_TYPE::ELLIPSE);
+				CBlueRect* pRe = new CBlueRect;
+				pRe->SetPos(Vec2(Scale / 2.f + (Scale)*i + Margin, 143.f + (Scale)*j));
+				pRe->SetScale(Vec2(Scale, Scale));
+				AddObject(pRe, GROUP_TYPE::RECTANGLE);
 			}
-			else
+			else if (i == 1)
 			{
-				CRectangle* pRe = new CRectangle;
+				CGreenRect* pRe = new CGreenRect;
+				pRe->SetPos(Vec2(Scale / 2.f + (Scale)*i + Margin, 143.f + (Scale)*j));
+				pRe->SetScale(Vec2(Scale, Scale));
+				AddObject(pRe, GROUP_TYPE::RECTANGLE);
+			}
+			else if (i == 2)
+			{
+				CPurpleRect* pRe = new CPurpleRect;
+				pRe->SetPos(Vec2(Scale / 2.f + (Scale)*i + Margin, 143.f + (Scale)*j));
+				pRe->SetScale(Vec2(Scale, Scale));
+				AddObject(pRe, GROUP_TYPE::RECTANGLE);
+			}
+			else if (i == 3)
+			{
+				CRedRect* pRe = new CRedRect;
+				pRe->SetPos(Vec2(Scale / 2.f + (Scale)*i + Margin, 143.f + (Scale)*j));
+				pRe->SetScale(Vec2(Scale, Scale));
+				AddObject(pRe, GROUP_TYPE::RECTANGLE);
+			}
+			else if (i == 4)
+			{
+				CYellowRect* pRe = new CYellowRect;
 				pRe->SetPos(Vec2(Scale / 2.f + (Scale)*i + Margin, 143.f + (Scale)*j));
 				pRe->SetScale(Vec2(Scale, Scale));
 				AddObject(pRe, GROUP_TYPE::RECTANGLE);
 			}
 		}
 	}
-	
-
-	
 }
 
 void CScene_START::Exit()

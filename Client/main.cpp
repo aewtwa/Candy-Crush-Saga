@@ -8,8 +8,6 @@
 // 전역 변수:
 HINSTANCE hInst;                                // 현재 인스턴스입니다.
 HWND g_hWnd;
-WCHAR szTitle[MAX_LOADSTRING];                  // 제목 표시줄 텍스트입니다.
-WCHAR szWindowClass[MAX_LOADSTRING];            // 기본 창 클래스 이름입니다.
 
 // 이 코드 모듈에 포함된 함수의 선언을 전달합니다:
 ATOM                MyRegisterClass(HINSTANCE hInstance);
@@ -22,14 +20,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_ LPWSTR    lpCmdLine,
                      _In_ int       nCmdShow)
 {
-    UNREFERENCED_PARAMETER(hPrevInstance);
-    UNREFERENCED_PARAMETER(lpCmdLine);
-
+    _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
     // TODO: 여기에 코드를 입력합니다.
-
-    // 전역 문자열을 초기화합니다.
-    LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
-    LoadStringW(hInstance, IDC_CLIENT, szWindowClass, MAX_LOADSTRING);
 
     // 윈도우 정보 등록
     MyRegisterClass(hInstance);
@@ -50,8 +42,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     // 단축키 테이블 정보 로딩
     HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_CLIENT));
-
     MSG msg;
+
     // GetMessage
     // 메세지큐에서 메세지가 확인될때까지 대기
     // msg.message == WM_QUIT 인 경우 false를 반환 -> 프로그램 종료.
@@ -108,7 +100,7 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
     wcex.hCursor        = LoadCursor(nullptr, IDC_ARROW);
     wcex.hbrBackground  = (HBRUSH)(COLOR_WINDOW+1);
     wcex.lpszMenuName   = nullptr;
-    wcex.lpszClassName  = szWindowClass;
+    wcex.lpszClassName  = L"Crush";
     wcex.hIconSm        = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
 
     return RegisterClassExW(&wcex);
@@ -128,7 +120,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 {
    hInst = hInstance; // 인스턴스 핸들을 전역 변수에 저장합니다.
 
-   g_hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
+   g_hWnd = CreateWindowW(L"Crush", L"Crush", WS_OVERLAPPEDWINDOW,
       CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
 
    if (!g_hWnd)
@@ -141,6 +133,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    return TRUE;
 }
+
+INT_PTR CALLBACK CreateTileProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam);
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {

@@ -49,3 +49,14 @@ public:
 		return *this;
 	}
 };
+
+struct FSelectPen
+{
+private:
+	HPEN hPrevPen;
+	HDC  hCurDC;
+
+public:
+	FSelectPen(HDC _dc, PEN_TYPE _Type);
+	~FSelectPen();
+};

@@ -41,14 +41,14 @@
     <Filter Include="Engine\04. Object\Player">
       <UniqueIdentifier>{e806772a-8568-49d5-a4ef-36b2b64eee23}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\04. Object\Ellipse">
-      <UniqueIdentifier>{c33f9a42-3c81-4eef-9959-bb17b3fea2c2}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine\04. Object\Rectangle">
       <UniqueIdentifier>{9e792217-d1ba-4f6a-b9f2-1e78ddcd740b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\06. Entity">
+    <Filter Include="Engine\07. Entity">
       <UniqueIdentifier>{a555f643-e7ab-4c05-b30b-0ea2e2798bfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\06. Component">
+      <UniqueIdentifier>{62c4fce6-efdc-43d5-80fb-c0ba889c7342}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -73,7 +73,6 @@
     <ClInclude Include="CKeyMgr.h">
       <Filter>Engine\03. Manager\KeyMgr</Filter>
     </ClInclude>
-    <ClInclude Include="pch.h" />
     <ClInclude Include="CObject.h">
       <Filter>Engine\04. Object</Filter>
     </ClInclude>
@@ -95,14 +94,32 @@
     <ClInclude Include="CPlayer.h">
       <Filter>Engine\04. Object\Player</Filter>
     </ClInclude>
-    <ClInclude Include="CEllipse.h">
-      <Filter>Engine\04. Object\Ellipse</Filter>
-    </ClInclude>
     <ClInclude Include="CRectangle.h">
       <Filter>Engine\04. Object\Rectangle</Filter>
     </ClInclude>
     <ClInclude Include="CEntity.h">
-      <Filter>Engine\06. Entity</Filter>
+      <Filter>Engine\07. Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="CBlueRect.h">
+      <Filter>Engine\04. Object\Rectangle</Filter>
+    </ClInclude>
+    <ClInclude Include="CRedRect.h">
+      <Filter>Engine\04. Object\Rectangle</Filter>
+    </ClInclude>
+    <ClInclude Include="CGreenRect.h">
+      <Filter>Engine\04. Object\Rectangle</Filter>
+    </ClInclude>
+    <ClInclude Include="CYellowRect.h">
+      <Filter>Engine\04. Object\Rectangle</Filter>
+    </ClInclude>
+    <ClInclude Include="CPurpleRect.h">
+      <Filter>Engine\04. Object\Rectangle</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Default</Filter>
+    </ClInclude>
+    <ClInclude Include="CComponent.h">
+      <Filter>Engine\06. Component</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -125,7 +142,6 @@
     <ClCompile Include="CKeyMgr.cpp">
       <Filter>Engine\03. Manager\KeyMgr</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="CObject.cpp">
       <Filter>Engine\04. Object</Filter>
     </ClCompile>
@@ -144,14 +160,35 @@
     <ClCompile Include="CPlayer.cpp">
       <Filter>Engine\04. Object\Player</Filter>
     </ClCompile>
-    <ClCompile Include="CEllipse.cpp">
-      <Filter>Engine\04. Object\Ellipse</Filter>
-    </ClCompile>
     <ClCompile Include="CRectangle.cpp">
       <Filter>Engine\04. Object\Rectangle</Filter>
     </ClCompile>
     <ClCompile Include="CEntity.cpp">
-      <Filter>Engine\06. Entity</Filter>
+      <Filter>Engine\07. Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="CBlueRect.cpp">
+      <Filter>Engine\04. Object\Rectangle</Filter>
+    </ClCompile>
+    <ClCompile Include="struct.cpp">
+      <Filter>Engine\01. Header</Filter>
+    </ClCompile>
+    <ClCompile Include="CRedRect.cpp">
+      <Filter>Engine\04. Object\Rectangle</Filter>
+    </ClCompile>
+    <ClCompile Include="CGreenRect.cpp">
+      <Filter>Engine\04. Object\Rectangle</Filter>
+    </ClCompile>
+    <ClCompile Include="CPurpleRect.cpp">
+      <Filter>Engine\04. Object\Rectangle</Filter>
+    </ClCompile>
+    <ClCompile Include="CYellowRect.cpp">
+      <Filter>Engine\04. Object\Rectangle</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Default</Filter>
+    </ClCompile>
+    <ClCompile Include="CComponent.cpp">
+      <Filter>Engine\06. Component</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
