@@ -26,10 +26,9 @@ enum class GROUP_TYPE
 {
 	DEFAULT,
 	PLAYER,
-	MISSILE,
-	MONSTER,
-
-	END = 32
+	RECTANGLE,
+	ELLIPSE,
+	END
 };
 
 enum class SCENE_TYPE

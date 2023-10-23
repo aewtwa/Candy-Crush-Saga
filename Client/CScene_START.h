@@ -6,7 +6,7 @@ class CScene_START :
 {
 public:
     CScene_START();
-    ~CScene_START();
+    virtual ~CScene_START();
 
     virtual void Enter();
     virtual void Exit();

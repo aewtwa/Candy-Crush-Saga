@@ -6,6 +6,15 @@
 #include "CTimeMgr.h"
 #include "CSceneMgr.h"
 
+CPlayer::CPlayer()
+{
+	SetName(L"Player");
+}
+
+CPlayer::~CPlayer()
+{
+}
+
 void CPlayer::update()
 {
 	Vec2 vPos = GetPos();

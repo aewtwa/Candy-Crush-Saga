@@ -1,6 +1,8 @@
 #pragma once
+#include "CEntity.h"
 
-class CObject
+class CObject :
+	public CEntity
 {
 private:
 	Vec2	m_vPos;

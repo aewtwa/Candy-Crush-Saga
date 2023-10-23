@@ -38,9 +38,6 @@
     <Filter Include="Engine\05. Scene\Scene_START">
       <UniqueIdentifier>{f62da7cf-5614-46d2-9911-ea64600e525f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\05. Scene\Scene_TOOL">
-      <UniqueIdentifier>{60d06850-0e6c-42b5-a027-ac1fb83127f4}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine\04. Object\Player">
       <UniqueIdentifier>{e806772a-8568-49d5-a4ef-36b2b64eee23}</UniqueIdentifier>
     </Filter>
@@ -49,6 +46,9 @@
     </Filter>
     <Filter Include="Engine\04. Object\Rectangle">
       <UniqueIdentifier>{9e792217-d1ba-4f6a-b9f2-1e78ddcd740b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\06. Entity">
+      <UniqueIdentifier>{a555f643-e7ab-4c05-b30b-0ea2e2798bfb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -101,6 +101,9 @@
     <ClInclude Include="CRectangle.h">
       <Filter>Engine\04. Object\Rectangle</Filter>
     </ClInclude>
+    <ClInclude Include="CEntity.h">
+      <Filter>Engine\06. Entity</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Client.rc">
@@ -146,6 +149,9 @@
     </ClCompile>
     <ClCompile Include="CRectangle.cpp">
       <Filter>Engine\04. Object\Rectangle</Filter>
+    </ClCompile>
+    <ClCompile Include="CEntity.cpp">
+      <Filter>Engine\06. Entity</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
