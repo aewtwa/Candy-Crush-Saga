@@ -3,11 +3,14 @@
 
 #include "CKeyMgr.h"
 #include "CSceneMgr.h"
+#include "CPathMgr.h"
 
 #include "CCore.h"
 #include "CObject.h"
 
 #include "CPlayer.h"
+
+#include "CTexture.h"
 
 CScene_START::CScene_START()
 {
@@ -21,7 +24,13 @@ CScene_START::~CScene_START()
 
 void CScene_START::Enter()
 {
+	CTexture* pTex = new CTexture;
 
+	wstring strFilePath = CPathMgr::GetInst()->GetContentPath();
+	strFilePath += L"texture\\mouse.bmp";
+	pTex->Load(strFilePath);
+
+	delete pTex;
 }
 
 void CScene_START::Exit()
