@@ -1,25 +1,13 @@
 #pragma once
 #include "CEntity.h"
 
-class CComponent;
-
 class CObject :
 	public CEntity
 {
 private:
 	Vec2				m_vPos;
 	Vec2				m_vScale;
-	vector<CComponent*>	m_vecComponent;
-
-protected:
-	template<typename T>
-	T* AddComponent(const wstring& _strName = L"")
-	{
-		T* pNewCom = new T(this);
-		m_vecComponent.push_back(pNewCom);
-		pNewCom->SetName(_strName);
-		return pNewCom;
-	}
+	class CCollider*	m_pCollider;
 
 public:
 	CObject();
@@ -30,6 +18,8 @@ public:
 
 	void SetPos(Vec2 _vPos) { m_vPos = _vPos; }
 	void SetScale(Vec2 _vScale) { m_vScale = _vScale; }
+
+	void CreateCollider();
 
 	virtual void update() = 0;
 	virtual void render(HDC _dc) = 0;

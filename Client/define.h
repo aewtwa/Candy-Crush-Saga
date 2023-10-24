@@ -38,7 +38,7 @@ enum class SCENE_TYPE
 {
 	TOOL,
 	START,
-	STAGE_01,
+	PLAY,
 	STAGE_02,
 
 	END

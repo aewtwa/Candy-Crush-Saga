@@ -1,16 +1,13 @@
 #include "pch.h"
 #include "CScene_START.h"
 
+#include "CKeyMgr.h"
+#include "CSceneMgr.h"
+
 #include "CCore.h"
 #include "CObject.h"
 
 #include "CPlayer.h"
-
-#include "CBlueRect.h"
-#include "CGreenRect.h"
-#include "CPurpleRect.h"
-#include "CRedRect.h"
-#include "CYellowRect.h"
 
 CScene_START::CScene_START()
 {
@@ -24,60 +21,19 @@ CScene_START::~CScene_START()
 
 void CScene_START::Enter()
 {
-	// Player Object Ãß°¡
-	CObject* pObj = new CPlayer;
-	pObj->SetPos(Vec2(640.f, 384.f));
-	pObj->SetScale(Vec2(100.f, 100.f));
-	AddObject(pObj, GROUP_TYPE::DEFAULT);
 
-	unsigned short int Width = 9;
-	unsigned short int Height = 9;
-	float Scale = 50.f;
-	float Margin = 100.f;
-
-	for (unsigned short int i = 0; i < Width; i++)
-	{
-		for (unsigned short int j = 0; j < Height; j++)
-		{
-			if (i == 0)
-			{
-				CBlueRect* pRe = new CBlueRect;
-				pRe->SetPos(Vec2(Scale / 2.f + (Scale)*i + Margin, 143.f + (Scale)*j));
-				pRe->SetScale(Vec2(Scale, Scale));
-				AddObject(pRe, GROUP_TYPE::RECTANGLE);
-			}
-			else if (i == 1)
-			{
-				CGreenRect* pRe = new CGreenRect;
-				pRe->SetPos(Vec2(Scale / 2.f + (Scale)*i + Margin, 143.f + (Scale)*j));
-				pRe->SetScale(Vec2(Scale, Scale));
-				AddObject(pRe, GROUP_TYPE::RECTANGLE);
-			}
-			else if (i == 2)
-			{
-				CPurpleRect* pRe = new CPurpleRect;
-				pRe->SetPos(Vec2(Scale / 2.f + (Scale)*i + Margin, 143.f + (Scale)*j));
-				pRe->SetScale(Vec2(Scale, Scale));
-				AddObject(pRe, GROUP_TYPE::RECTANGLE);
-			}
-			else if (i == 3)
-			{
-				CRedRect* pRe = new CRedRect;
-				pRe->SetPos(Vec2(Scale / 2.f + (Scale)*i + Margin, 143.f + (Scale)*j));
-				pRe->SetScale(Vec2(Scale, Scale));
-				AddObject(pRe, GROUP_TYPE::RECTANGLE);
-			}
-			else if (i == 4)
-			{
-				CYellowRect* pRe = new CYellowRect;
-				pRe->SetPos(Vec2(Scale / 2.f + (Scale)*i + Margin, 143.f + (Scale)*j));
-				pRe->SetScale(Vec2(Scale, Scale));
-				AddObject(pRe, GROUP_TYPE::RECTANGLE);
-			}
-		}
-	}
 }
 
 void CScene_START::Exit()
 {
+}
+
+void CScene_START::update()
+{
+	CScene::update();
+
+	if (KEY_TAP(KEY::Q))
+	{
+		CSceneMgr::ChangeScene(SCENE_TYPE::PLAY);
+	}
 }

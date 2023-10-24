@@ -9,6 +9,8 @@
 CPlayer::CPlayer()
 {
 	SetName(L"Player");
+
+	// CreateColloder();
 }
 
 CPlayer::~CPlayer()
@@ -41,6 +43,7 @@ void CPlayer::update()
 	if (KEY_TAP(KEY::LBTN))
 	{
 		Vec2 MousePos = CKeyMgr::GetMousePosition();
+		SelectRect(MousePos);
 	}
 
 	SetPos(vPos);
@@ -52,4 +55,15 @@ void CPlayer::render(HDC _dc)
 	Vec2 vScale = GetScale();
 	Rectangle(_dc, (int)(vPos.x - vScale.x / 2.f), (int)(vPos.y - vScale.y / 2.f),
 				   (int)(vPos.x + vScale.x / 2.f), (int)(vPos.y + vScale.y / 2.f));
+}
+
+CRectangle* CPlayer::SelectRect(Vec2 _mousePos)
+{
+
+	return nullptr;
+}
+
+void CPlayer::ChangeRect()
+{
+
 }

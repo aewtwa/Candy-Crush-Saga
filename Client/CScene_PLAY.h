@@ -1,15 +1,14 @@
 #pragma once
 #include "CScene.h"
 
-class CScene_START :
+class CScene_PLAY :
     public CScene
 {
 public:
-    CScene_START();
-    virtual ~CScene_START();
+    CScene_PLAY();
+    virtual ~CScene_PLAY();
 
     virtual void Enter() override;
     virtual void Exit() override;
     virtual void update() override;
 };
-

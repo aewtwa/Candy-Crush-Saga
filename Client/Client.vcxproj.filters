@@ -44,11 +44,20 @@
     <Filter Include="Engine\04. Object\Rectangle">
       <UniqueIdentifier>{9e792217-d1ba-4f6a-b9f2-1e78ddcd740b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\07. Entity">
+    <Filter Include="Engine\05. Scene\Scene_Play">
+      <UniqueIdentifier>{624dd07f-183c-46d9-b1e4-9d94d6908e13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\06. Resource">
+      <UniqueIdentifier>{7030bb12-212a-47f3-ad3b-b2a935b0fecf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\07. Component">
+      <UniqueIdentifier>{62c4fce6-efdc-43d5-80fb-c0ba889c7342}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\08. Entity">
       <UniqueIdentifier>{a555f643-e7ab-4c05-b30b-0ea2e2798bfb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\06. Component">
-      <UniqueIdentifier>{62c4fce6-efdc-43d5-80fb-c0ba889c7342}</UniqueIdentifier>
+    <Filter Include="Engine\06. Resource\Texture">
+      <UniqueIdentifier>{7c592451-fc6f-4e4d-9334-e1d583bea76c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -98,7 +107,7 @@
       <Filter>Engine\04. Object\Rectangle</Filter>
     </ClInclude>
     <ClInclude Include="CEntity.h">
-      <Filter>Engine\07. Entity</Filter>
+      <Filter>Engine\08. Entity</Filter>
     </ClInclude>
     <ClInclude Include="CBlueRect.h">
       <Filter>Engine\04. Object\Rectangle</Filter>
@@ -118,8 +127,14 @@
     <ClInclude Include="pch.h">
       <Filter>Default</Filter>
     </ClInclude>
-    <ClInclude Include="CComponent.h">
-      <Filter>Engine\06. Component</Filter>
+    <ClInclude Include="CScene_PLAY.h">
+      <Filter>Engine\05. Scene\Scene_Play</Filter>
+    </ClInclude>
+    <ClInclude Include="CCollider.h">
+      <Filter>Engine\07. Component</Filter>
+    </ClInclude>
+    <ClInclude Include="CRes.h">
+      <Filter>Engine\06. Resource</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -164,7 +179,7 @@
       <Filter>Engine\04. Object\Rectangle</Filter>
     </ClCompile>
     <ClCompile Include="CEntity.cpp">
-      <Filter>Engine\07. Entity</Filter>
+      <Filter>Engine\08. Entity</Filter>
     </ClCompile>
     <ClCompile Include="CBlueRect.cpp">
       <Filter>Engine\04. Object\Rectangle</Filter>
@@ -187,8 +202,14 @@
     <ClCompile Include="main.cpp">
       <Filter>Default</Filter>
     </ClCompile>
-    <ClCompile Include="CComponent.cpp">
-      <Filter>Engine\06. Component</Filter>
+    <ClCompile Include="CScene_PLAY.cpp">
+      <Filter>Engine\05. Scene\Scene_Play</Filter>
+    </ClCompile>
+    <ClCompile Include="CCollider.cpp">
+      <Filter>Engine\07. Component</Filter>
+    </ClCompile>
+    <ClCompile Include="CRes.cpp">
+      <Filter>Engine\06. Resource</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

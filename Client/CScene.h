@@ -16,8 +16,6 @@ public:
 	void SetName(const wstring& _strName) { m_strName = _strName; }
 	const wstring& GetName() { return m_strName; }
 
-	void update();
-	void render(HDC _dc);
 
 	void AddObject(CObject* _pObj, GROUP_TYPE _eType)
 	{
@@ -26,4 +24,7 @@ public:
 
 	virtual void Enter() = 0; // 해당 Scene에 진입시 호출
 	virtual void Exit() = 0;  // 해당 Scene을 탈출시 호출
+
+	virtual void update();
+	virtual void render(HDC _dc);
 };
