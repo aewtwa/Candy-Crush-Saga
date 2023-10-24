@@ -10,7 +10,7 @@ CPlayer::CPlayer()
 {
 	SetName(L"Player");
 
-	// CreateColloder();
+	CreateCollider();
 }
 
 CPlayer::~CPlayer()

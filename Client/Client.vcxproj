@@ -156,6 +156,8 @@
     <ClInclude Include="CSceneMgr.h" />
     <ClInclude Include="CScene_PLAY.h" />
     <ClInclude Include="CScene_START.h" />
+    <ClInclude Include="CSound.h" />
+    <ClInclude Include="CTexture.h" />
     <ClInclude Include="CTimeMgr.h" />
     <ClInclude Include="CYellowRect.h" />
     <ClInclude Include="define.h" />
@@ -182,6 +184,8 @@
     <ClCompile Include="CSceneMgr.cpp" />
     <ClCompile Include="CScene_PLAY.cpp" />
     <ClCompile Include="CScene_START.cpp" />
+    <ClCompile Include="CSound.cpp" />
+    <ClCompile Include="CTexture.cpp" />
     <ClCompile Include="CTimeMgr.cpp" />
     <ClCompile Include="CYellowRect.cpp" />
     <ClCompile Include="main.cpp" />
