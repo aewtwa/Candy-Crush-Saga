@@ -159,6 +159,7 @@
     <ClInclude Include="CRectangle.h" />
     <ClInclude Include="CRedRect.h" />
     <ClInclude Include="CRes.h" />
+    <ClInclude Include="CResMgr.h" />
     <ClInclude Include="CScene.h" />
     <ClInclude Include="CSceneMgr.h" />
     <ClInclude Include="CScene_PLAY.h" />
@@ -188,6 +189,7 @@
     <ClCompile Include="CRectangle.cpp" />
     <ClCompile Include="CRedRect.cpp" />
     <ClCompile Include="CRes.cpp" />
+    <ClCompile Include="CResMgr.cpp" />
     <ClCompile Include="CScene.cpp" />
     <ClCompile Include="CSceneMgr.cpp" />
     <ClCompile Include="CScene_PLAY.cpp" />

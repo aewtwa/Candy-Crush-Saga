@@ -12,25 +12,13 @@
 
 #include "CTexture.h"
 
-CScene_START::CScene_START()
+void CScene_START::init()
 {
-
-}
-
-CScene_START::~CScene_START()
-{
-
 }
 
 void CScene_START::Enter()
 {
-	CTexture* pTex = new CTexture;
-
-	wstring strFilePath = CPathMgr::GetInst()->GetContentPath();
-	strFilePath += L"texture\\mouse.bmp";
-	pTex->Load(strFilePath);
-
-	delete pTex;
+	
 }
 
 void CScene_START::Exit()

@@ -12,14 +12,8 @@
 #include "CRedRect.h"
 #include "CYellowRect.h"
 
-CScene_PLAY::CScene_PLAY()
+void CScene_PLAY::init()
 {
-
-}
-
-CScene_PLAY::~CScene_PLAY()
-{
-
 }
 
 void CScene_PLAY::Enter()

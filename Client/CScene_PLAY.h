@@ -5,10 +5,10 @@ class CScene_PLAY :
     public CScene
 {
 public:
-    CScene_PLAY();
-    virtual ~CScene_PLAY();
 
+    virtual void init() override;
     virtual void Enter() override;
     virtual void Exit() override;
+
     virtual void update() override;
 };

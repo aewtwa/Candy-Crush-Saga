@@ -16,7 +16,15 @@ CObject::~CObject()
 		delete m_pCollider;
 }
 
+void CObject::finalupdate()
+{
+	if (m_pCollider)
+		m_pCollider->finalupdate();
+}
+ 
 void CObject::CreateCollider()
 {
 	m_pCollider = new CCollider;
+	m_pCollider->m_pOwner = this;
 }
+

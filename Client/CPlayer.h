@@ -2,10 +2,14 @@
 #include "CObject.h"
 
 class CRectangle;
+class CTexture;
 
 class CPlayer :
     public CObject
 {
+private:
+    CTexture* m_pTex;
+
 public:
     CPlayer();
     virtual ~CPlayer();
@@ -16,5 +20,4 @@ public:
     CRectangle* SelectRect(Vec2 _mousePos);
     void ChangeRect();
 
-private:
 };
